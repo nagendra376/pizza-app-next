@@ -1,14 +1,27 @@
+"use client";
+
 import Image from "next/image";
-import styles from "./Header.module.scss";
+import styles from "./index.module.scss";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
+  const router = useRouter();
+
+  const handleHome = () => {
+    router.push("/");
+  };
+
   return (
-    <header>
-      <div className=" border-bottom">
+    <header className=" w-100" style={{ backgroundColor: "#fffaee" }}>
+      <div className="border-bottom">
         <div className="d-flex align-items-center">
           <div className="flex-grow-1"></div>
 
-          <div className="d-flex align-items-center gap-2">
+          <div
+            className="d-flex align-items-center gap-2 "
+            onClick={handleHome}
+            style={{ cursor: "pointer" }}
+          >
             <Image src="/logo.png" alt="logo" width={100} height={100} />
             <span className={styles["logo-text"]}>Pizza Mania&apos;s</span>
           </div>

@@ -2,7 +2,12 @@ import Buttons from "../ui/Button";
 import styles from "./index.module.scss";
 
 export default function Main() {
-  const actions = ["order ", "past orders", "contact "];
+  const actions = [
+    { label: "Order", path: "/order" },
+    { label: "Past Orders", path: "/past-order" },
+    { label: "Contact", path: "/contact" },
+  ];
+
   return (
     <>
       <div
@@ -18,7 +23,12 @@ export default function Main() {
           <div className="col-md-6 d-flex justify-content-end">
             <div className=" d-flex flex-column flex-grow-1 justify-content-center align-items-center gap-2 ">
               {actions.map((item, index) => (
-                <Buttons classname={styles["main-buttons"]} key={index} text={item} />
+                <Buttons
+                  classname={styles["main-buttons"]}
+                  key={index}
+                  text={item.label}
+                  href={item.path}
+                />
               ))}
             </div>
           </div>

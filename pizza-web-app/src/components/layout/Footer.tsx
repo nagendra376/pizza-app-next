@@ -7,8 +7,8 @@ export default function Footer() {
         Pizza of the Day
       </h2>
       <div className=" d-flex container position-relative align-items-center justify-content-center">
-        <div className="row w-60 align-items-center">
-          <div className="col-md-6">
+        <div className="row w-75 mx-auto align-items-center justify-content-center">
+          <div className="col-md-6 text-center">
             <h3>The Spinach Pesto Pizza</h3>
             <p>Spinach, Artichokes, Tomatoes, Sun-dried Tomatoes, Garlic, Pesto Sauce</p>
             <p>$12</p>

@@ -1,0 +1,17 @@
+{
+  "name": "pizza-app-next",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Monorepo root for the Pizza Web App (Next.js)",
+  "scripts": {
+    "dev": "npm --prefix pizza-web-app run dev",
+    "build": "npm --prefix pizza-web-app run build",
+    "start": "npm --prefix pizza-web-app run start",
+    "lint": "npm --prefix pizza-web-app run lint",
+    "format": "npm --prefix pizza-web-app run format",
+    "postinstall": "npm --prefix pizza-web-app install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

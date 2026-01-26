@@ -59,3 +59,32 @@ p {
   display: inline-block;
   cursor: pointer;
 }
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+button:disabled {
+  border: 1px solid #ccc;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+  padding: 20px;
+  font-weight: 600;
+  color: #666;
+}

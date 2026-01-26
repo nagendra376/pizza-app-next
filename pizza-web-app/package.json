@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "api": "json-server --watch data/db.json --routes data/routes.json --port 4000"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
@@ -24,6 +25,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.4",
     "eslint-config-prettier": "^10.1.8",
+    "json-server": "^1.0.0-beta.3",
     "prettier": "^3.8.1",
     "typescript": "^5"
   }

@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { contactSchema, contactFormData, ContactFormData } from "@/lib/validators/contactSchema";
+import { contactSchema, ContactFormData } from "@/lib/validators/contactSchema";
 
 export default function ContactForm() {
   const form = useForm<ContactFormData>({
@@ -43,8 +43,8 @@ export default function ContactForm() {
         <textarea className="mb-4 " placeholder="Message" {...form.register("message")} />
         {form.formState.errors.message && <p>{form.formState.errors.message?.message}</p>}
 
-        <button className="buttons mx-auto" type="submit" disabled={mutation.isLoading}>
-          {mutation.isLoading ? "Sending..." : "Submit"}
+        <button className="buttons mx-auto" type="submit" disabled={mutation.isPending}>
+          {mutation.isPending ? "Sending..." : "Submit"}
         </button>
 
         {mutation.isSuccess && <p>Message sent successfully ✅</p>}
